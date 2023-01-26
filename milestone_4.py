@@ -25,4 +25,3 @@ class Hangman:
             else:
                 print("Invalid letter. Please, enter a single alphabetical character.")
 
-    ask_for_input()
