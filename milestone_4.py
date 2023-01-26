@@ -2,11 +2,11 @@ import random
 
 class Hangman:
     def __init__(self, word_list, num_lives=5):
-        self.word = random.choice(self.word_list)
+        self.num_lives = num_lives
+        self.word_list = word_list
+        self.word = random.choice(word_list)
         self.word_guessed = ['_']*len(self.word)
         self.num_letters = len(set(self.word))
-        self.num_lives = num_lives
-        self.word_list = ["orange", "mango", "peach", "pineapple", "kiwi"]
         self.list_of_guesses = []
 
     def check_guess(self, guess):
@@ -25,4 +25,5 @@ class Hangman:
             else:
                 print("Invalid letter. Please, enter a single alphabetical character.")
 
-hng1 = Hangman(["orange", "mango", "peach", "pineapple", "kiwi"])
+word_list = ["orange", "mango", "peach", "pineapple", "kiwi"]
+hng1 = Hangman(word_list)
