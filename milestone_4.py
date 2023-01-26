@@ -8,6 +8,3 @@ class Hangman:
         self.num_lives = num_lives
         self.word_list = ["orange", "mango", "peach", "pineapple", "kiwi"]
         self.list_of_guesses = []
-        print(f"The mistery word has {num_letters} characters")
-        print(f"{word_guessed}")
-        pass
