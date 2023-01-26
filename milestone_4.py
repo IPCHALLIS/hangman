@@ -6,6 +6,6 @@ class Hangman:
         self.word_guessed = "_"*len(word)
         self.num_letters = len(word)
         self.num_lives = num_lives
-        word_list = ["orange", "mango", "peach", "pineapple", "kiwi"]
+        self.word_list = ["orange", "mango", "peach", "pineapple", "kiwi"]
         self.list_of_guesses = []
 
