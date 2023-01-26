@@ -9,5 +9,3 @@ class Hangman:
         word_list = word_list
         self.list_of_guesses = []
 
-
-Hangman(["orange", "mango", "peach", "pineapple", "kiwi"])
