@@ -9,4 +9,3 @@ class Hangman:
         self.word_list = ["orange", "mango", "peach", "pineapple", "kiwi"]
         self.list_of_guesses = []
 
-hgmn1 = Hangman(word_list, num_lives)
