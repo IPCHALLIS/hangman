@@ -8,6 +8,6 @@ class Hangman:
         self.num_lives = num_lives
         word_list = word_list
         self.list_of_guesses = []
-        print(word)
+
 
 Hangman(["orange", "mango", "peach", "pineapple", "kiwi"])
