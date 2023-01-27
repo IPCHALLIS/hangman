@@ -21,7 +21,7 @@ class Hangman:
             guess = input("Please enter a single, alphabetical character: ")
             if len(guess) != 1 and guess != guess.isalpha():
                 print("Invalid letter. Please, enter a single alphabetical character.")
-            elif guess in list_of_guesses:
+            elif guess in self.list_of_guesses:
                 print("You already tried that letter!")
             else:
                 self.check_guess(guess)
