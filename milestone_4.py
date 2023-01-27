@@ -19,12 +19,14 @@ class Hangman:
             guess = input("Please enter a single, alphabetical character: ")
             if len(guess) != 1 and guess != guess.isalpha():
                 print("Invalid letter. Please, enter a single alphabetical character.")
-            elif guess in self.list_of_guesses:
-                print("You already tried that letter!")
+            elif guess == self.word_guessed:
+                if self.word_guessed in self.list_of_guesses:
+                    print("You already tried that letter!")
             else:
                 self.check_guess(guess)
                 break
 
 
+list_of_guesses = []
 word_list = ["orange", "mango", "peach", "pineapple", "kiwi"]
 hng1 = Hangman(word_list)
