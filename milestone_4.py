@@ -17,7 +17,6 @@ class Hangman:
             print(f"Sorry, {guess} is not in the word. Try again.")
 
     def ask_for_input(self):
-        check_guess(guess)
         while True:
             guess = input("Please enter a single, alphabetical character: ")
             if len(guess) != 1 and guess != guess.isalpha():
@@ -25,7 +24,7 @@ class Hangman:
             elif guess in list_of_guesses:
                 print("You already tried that letter!")
             else:
-                check_guess(guess)
+                self.check_guess(guess)
 
 
 word_list = ["orange", "mango", "peach", "pineapple", "kiwi"]
