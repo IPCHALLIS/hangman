@@ -11,7 +11,7 @@ class Hangman:
 
     def check_guess(self, guess):
         guess = guess.lower()
-        if guess in word:
+        if guess in self.word:
             print(f"Good guess! {guess} is in the word.")
         else:
             print(f"Sorry, {guess} is not in the word. Try again.")
