@@ -26,7 +26,7 @@ class Hangman:
                 print("You already tried that letter!")
             else:
                 check_guess(guess)
-    ask_for_input(self)
+
 
 word_list = ["orange", "mango", "peach", "pineapple", "kiwi"]
 hng1 = Hangman(word_list)
