@@ -24,8 +24,8 @@ Overall, I found the game to work fairly smoothly. Nevertheless, I think there i
 
 ## Areas for Improvement
 
-    * Print statements could be spaced out more to allow for greater readability.
+1. Print statements could be spaced out more to allow for greater readability.
 
-    * To enhance the visual aesthetic of the game, a hangman image could be displayed in the terminal window with a stage by stage development that reflects the state of the game.
+2. To enhance the visual aesthetic of the game, a hangman image could be displayed in the terminal window with a stage by stage development that reflects the state of the game.
 
-    * To facilitate greater replayability; replace the word_list with a random word generator that searches a vocabulary database using API calls.
+3. To facilitate greater replayability; replace the word_list with a random word generator that searches a vocabulary database using API calls.
