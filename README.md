@@ -14,3 +14,18 @@ In milestone_4.py I focus on implementing the code I had written in milestones 2
 The first method (check_guess) takes 'self' and 'guess' as parameters. It converts the user's guess to lowercase and checks if the user's chosen letter is in the mystery word. If correct, it returns a print statement and replaces '_' in the word_guessed attribute for the correct letter, and reduces the num_letters attribute by 1. If the guess is incorrect, it reduces the num_lives attribute by 1 and returns two print statements. Finally, outside of both (correct/incorrect) conditions I call the list_of_guesses attribute and append the user's guess to the list.
 
 The second method (ask_for_input) takes only 'self' as a parameter. Here I create a while-loop and set it to 'True'. Inside the loop I assign guess to input(). This way the loop keeps running for the duration of the game (win or lose). The loop also contains one if-block that checks whether the guess is a single letter, and alphabetical. If not, it returns a print statement: 'invalid input..'. There is also an elif-block for checking whether the user repeats an entered letter. This searches the list_of_guesses attribute from the first method. If this condition is met, it returns a print statement, reminding the user not to use the same guess again. Lastly, I create an else-block in case the previous conditions are not met. In this scenario, I call the check_guess method and use 'break' to falsify the while-loop, and move outside.
+
+## Milestone 5
+In the final stage of my Hangman project I create a method called 'play_game' which takes one parameter: word_list. I define this outside the scope of the Hangman class in order to inherit its methods and attributes. I initially struggled with trying to call the object/instance I wanted to use for the 'play_game' method. However, I realised that I needed to add the name of the object as a prefix to the methods and attributes I was calling. For example, I faced multiple errors saying "ask_for_input" is not defined. This was because I did not specify 'game.ask_for_input'. The 'game' object was assigned to 'Hangman()'. Had I realised what this meant at first, it would have run as intended.
+
+The next issue I noticed was that I had not printed 'self.word_guessed', at the end of my 'init' function. Hence, the user would not have seen the empty spaces they needed to replace with their own guesses. I remedied this issue and run the file again to test its functionality and it worked as expected. Lastly, I added another print statement for 'self.word_guessed' inside the 'check_guess' method. I placed it underneath the if-block so that it would print an updated version of itself so the user can track their correct guesses. However, I also made sure I was outside the for-loop to prevent multiple print statements simultaneously.
+
+Overall, I found the game to work fairly smoothly. Nevertheless, I think there is definitely room for tidying and improving the user's experience when they interact with the terminal.
+
+## Areas for Improvement
+
+    1. Print statements could be spaced out more to allow for greater readability.
+
+    2. To enhance the visual aesthetic of the game, a hangman image could be displayed in the terminal window with a stage by stage development that reflects the state of the game.
+
+    3. To facilitate greater replayability; replace the word_list with a random word generator that searches a vocabulary database using API calls.
