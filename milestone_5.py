@@ -39,8 +39,6 @@ class Hangman:
 def play_game(word_list):
     game = Hangman(word_list, num_lives=5)
     while True:
-        print(game.num_lives)
-        print(game.num_letters)
         if game.num_letters > 0 and game.num_lives != 0:
             game.ask_for_input()
         elif game.num_lives == 0:
