@@ -8,6 +8,7 @@ class Hangman:
         self.word_guessed = ['_']*len(self.word)
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
+        print(self.word_guessed)
 
     def check_guess(self, guess):
         guess = guess.lower()
@@ -16,6 +17,7 @@ class Hangman:
             for i, x in enumerate(self.word):
                 if x == guess:
                    self.word_guessed[i] = guess
+                   print(self.word_guessed)
             self.num_letters -= 1
         else:
             self.num_lives -= 1
@@ -38,8 +40,8 @@ def play_game(word_list):
     num_lives = 5
     game = Hangman(word_list, num_lives)
     while True:
-        if num_letters > 0:
-            ask_for_input()
+        if game.num_letters > 0:
+            game.ask_for_input()
         elif num_lives == 0:
             print("You lost!")
             break
